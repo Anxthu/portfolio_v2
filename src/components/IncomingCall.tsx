@@ -68,7 +68,7 @@ const IncomingCall = () => {
                       <img
                         src="/2R7A2720.JPG"
                         alt="ANANTHU"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                       />
                     </motion.div>
 
@@ -135,7 +135,7 @@ const IncomingCall = () => {
                   <img
                     src="/2R7A2720.JPG"
                     alt="ANANTHU"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <div className="flex-1">
@@ -197,7 +197,7 @@ const IncomingCall = () => {
                 <img
                   src="/2R7A2720.JPG"
                   alt="ANANTHU"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </motion.div>
             </motion.div>

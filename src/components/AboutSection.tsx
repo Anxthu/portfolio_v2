@@ -68,7 +68,7 @@ const AboutSection = () => {
               <img
                 src="/2R7A2720.JPG"
                 alt="Portrait"
-                className="w-full h-auto object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-auto object-cover object-center mx-auto filter grayscale hover:grayscale-0 transition-all duration-700"
               />
             </motion.div>
           </div>
