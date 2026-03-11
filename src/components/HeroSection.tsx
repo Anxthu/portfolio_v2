@@ -169,7 +169,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{
                 duration: 1.6,
-                delay: 3 + i * 0.1,
+                delay: 0.2 + i * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="text-[clamp(3rem,10vw,8rem)] font-heading font-[800] leading-[0.95] tracking-tight text-foreground inline-block"
@@ -186,7 +186,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{
                 duration: 1.6,
-                delay: 3.6 + i * 0.08,
+                delay: 0.8 + i * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="mt-6 text-xs uppercase tracking-[0.25em] text-muted-foreground inline-block"

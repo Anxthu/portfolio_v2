@@ -22,14 +22,14 @@ const Archives = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white text-black">
 
         <div className="section-padding pt-32 pb-24">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-5xl md:text-7xl font-bold text-foreground mb-16 uppercase font-heading tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-[#E52E2D] mb-16 uppercase font-heading tracking-tight"
           >
             ARCHIVES
           </motion.h1>
@@ -56,7 +56,7 @@ const Archives = () => {
                   <img
                     src={projects[hoveredIndex].images[0]}
                     alt={projects[hoveredIndex].title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-none"
                   />
                 </motion.div>
               )}
@@ -73,19 +73,19 @@ const Archives = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 mb-2 md:mb-0">
-                    <span className="text-sm text-muted-foreground w-12 font-mono">
+                    <span className="text-sm text-black/50 w-12 font-mono">
                       {(i + 1).toString().padStart(2, "0")}
                     </span>
-                    <span className="text-2xl md:text-4xl font-heading uppercase tracking-tight text-foreground group-hover:text-primary transition-colors">
+                    <span className="text-2xl md:text-4xl font-heading uppercase tracking-tight text-black group-hover:text-[#E52E2D] transition-colors">
                       {project.title}
                     </span>
                   </div>
                   <div className="flex items-center gap-8 pl-16 md:pl-0">
-                    <span className="text-sm text-muted-foreground uppercase tracking-wider">
+                    <span className="text-sm text-black/50 uppercase tracking-wider">
                       {project.category}
                     </span>
                     {project.isOngoing && (
-                      <span className="text-xs bg-foreground text-background px-2 py-1 rounded-full font-bold uppercase tracking-wider">
+                      <span className="text-xs bg-black text-white px-2 py-1 font-bold uppercase tracking-wider">
                         Ongoing
                       </span>
                     )}

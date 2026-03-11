@@ -21,6 +21,44 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: "inari",
+        title: "Inari",
+        category: "Brand & App Design",
+        description: "Mobile experience for the Inari platform",
+        image: "/Projects Mockups/Inari/inari2mob1_opt.webp",
+        year: "2023",
+        role: "UI/UX Designer",
+        client: "Inari",
+        contentSections: [
+            {
+                title: "The App",
+                body: [
+                    "Inari is a concept for an on-demand home service marketplace. Whether it's plumbing, deep cleaning, or electrical repairs, the app connects homeowners with a curated network of verified local professionals.",
+                    "For this self-initiated project, my primary focus as a product designer was solving the massive lack of transparency native to the gig-economy service sector."
+                ]
+            },
+            {
+                title: "The Problem",
+                body: [
+                    "Inviting a stranger into your home for a repair is inherently stressful. Users hate opaque pricing, calling companies only to be put on hold, and the ambiguous \"4-hour service window\" where they are left wondering when the technician will actually arrive.",
+                    "Core UX Challenge: How might we design a booking and tracking experience that removes friction, establishes absolute trust in the provider, and provides highly transparent real-time updates?"
+                ]
+            },
+            {
+                title: "The Solution",
+                body: [
+                    "To combat form-fatigue, I broke down the traditionally lengthy questionnaire into a frictionless, chunked 4-step booking flow.",
+                    "More importantly, I designed a \"Live Tracking\" experience—similar to ridesharing apps—that activates the moment the technician is en route. It provides a live mini-map, exact ETA, and native messaging, replacing anxiety with absolute certainty."
+                ]
+            }
+        ],
+        images: [
+            "/Projects Mockups/Inari/inari2mob1_opt.webp",
+            "/Projects Mockups/Inari/Carosul01_opt.webp",
+            "/Projects Mockups/Inari/Desktop - 4_opt.webp",
+        ]
+    },
+    {
         id: "linear-home",
         title: "Linear Home",
         category: "Web & E-commerce",
@@ -65,44 +103,6 @@ export const projects: Project[] = [
             "/Projects Mockups/Linear Home/linearhomes store_opt.webp",
             "/Projects Mockups/Linear Home/linearhomemp1_opt.webp",
             "/Projects Mockups/Linear Home/Mockup_opt.webp",
-        ]
-    },
-    {
-        id: "inari",
-        title: "Inari",
-        category: "Brand & App Design",
-        description: "Mobile experience for the Inari platform",
-        image: "/Projects Mockups/Inari/inari2mob1_opt.webp",
-        year: "2023",
-        role: "UI/UX Designer",
-        client: "Inari",
-        contentSections: [
-            {
-                title: "The App",
-                body: [
-                    "Inari is a concept for an on-demand home service marketplace. Whether it's plumbing, deep cleaning, or electrical repairs, the app connects homeowners with a curated network of verified local professionals.",
-                    "For this self-initiated project, my primary focus as a product designer was solving the massive lack of transparency native to the gig-economy service sector."
-                ]
-            },
-            {
-                title: "The Problem",
-                body: [
-                    "Inviting a stranger into your home for a repair is inherently stressful. Users hate opaque pricing, calling companies only to be put on hold, and the ambiguous \"4-hour service window\" where they are left wondering when the technician will actually arrive.",
-                    "Core UX Challenge: How might we design a booking and tracking experience that removes friction, establishes absolute trust in the provider, and provides highly transparent real-time updates?"
-                ]
-            },
-            {
-                title: "The Solution",
-                body: [
-                    "To combat form-fatigue, I broke down the traditionally lengthy questionnaire into a frictionless, chunked 4-step booking flow.",
-                    "More importantly, I designed a \"Live Tracking\" experience—similar to ridesharing apps—that activates the moment the technician is en route. It provides a live mini-map, exact ETA, and native messaging, replacing anxiety with absolute certainty."
-                ]
-            }
-        ],
-        images: [
-            "/Projects Mockups/Inari/inari2mob1_opt.webp",
-            "/Projects Mockups/Inari/Carosul01_opt.webp",
-            "/Projects Mockups/Inari/Desktop - 4_opt.webp",
         ]
     },
     {

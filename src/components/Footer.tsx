@@ -40,6 +40,12 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground mb-2">
             © {new Date().getFullYear()} All rights reserved
           </p>
+          <p className="text-xs text-muted-foreground mb-2">
+            Photography by <a href="https://unsplash.com/@zablanca_clicks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">zablanca_clicks</a> on Unsplash
+          </p>
+          <p className="text-xs text-muted-foreground mb-4">
+            Ambient Drone UI Sound by ANANTHU
+          </p>
           <p className="text-xs text-foreground/70 italic max-w-xs">
             Crafting digital experiences with precision and purpose
           </p>

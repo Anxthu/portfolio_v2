@@ -2,7 +2,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { projects } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUp } from "lucide-react";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import ReadingProgress from "@/components/ReadingProgress";
@@ -179,11 +179,11 @@ const WorkDetail = () => {
 
                         {/* Research & Insights */}
                         {project.processImages.research && project.processImages.research.length > 0 && (
-                            <div className="mb-24">
+                            <div className="mb-24 max-w-6xl mx-auto">
                                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-8">
                                     Research & Insights
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                               </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {project.processImages.research.map((img, idx) => (
                                         <motion.img
                                             key={idx}
@@ -193,7 +193,7 @@ const WorkDetail = () => {
                                             transition={{ delay: idx * 0.1 }}
                                             src={img}
                                             alt={`Research ${idx + 1}`}
-                                            className="w-full h-auto"
+                                            className="w-full max-h-[60vh] object-contain shadow-xl bg-muted/20 p-2"
                                         />
                                     ))}
                                 </div>
@@ -202,11 +202,11 @@ const WorkDetail = () => {
 
                         {/* Wireframes */}
                         {project.processImages.wireframes && project.processImages.wireframes.length > 0 && (
-                            <div className="mb-24">
+                            <div className="mb-24 max-w-6xl mx-auto">
                                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-8">
                                     Wireframes & Concepts
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {project.processImages.wireframes.map((img, idx) => (
                                         <motion.img
                                             key={idx}
@@ -216,7 +216,7 @@ const WorkDetail = () => {
                                             transition={{ delay: idx * 0.1 }}
                                             src={img}
                                             alt={`Wireframe ${idx + 1}`}
-                                            className="w-full h-auto"
+                                            className="w-full max-h-[60vh] object-contain shadow-xl bg-muted/20 p-2"
                                         />
                                     ))}
                                 </div>
@@ -225,11 +225,11 @@ const WorkDetail = () => {
 
                         {/* Design System */}
                         {project.processImages.designSystem && project.processImages.designSystem.length > 0 && (
-                            <div className="mb-24">
+                            <div className="mb-24 max-w-6xl mx-auto">
                                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-8">
                                     Design System
                                 </h3>
-                                <div className="flex flex-col gap-6">
+                                <div className="flex flex-col gap-12">
                                     {project.processImages.designSystem.map((img, idx) => (
                                         <motion.img
                                             key={idx}
@@ -239,7 +239,7 @@ const WorkDetail = () => {
                                             transition={{ delay: idx * 0.1 }}
                                             src={img}
                                             alt={`Design System ${idx + 1}`}
-                                            className="w-full h-auto"
+                                            className="w-full max-h-[80vh] object-contain shadow-2xl bg-muted/10 p-4"
                                         />
                                     ))}
                                 </div>
@@ -248,11 +248,11 @@ const WorkDetail = () => {
 
                         {/* Iterations */}
                         {project.processImages.iterations && project.processImages.iterations.length > 0 && (
-                            <div className="mb-24">
+                            <div className="mb-24 max-w-6xl mx-auto">
                                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-8">
                                     Iterations & Refinements
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {project.processImages.iterations.map((img, idx) => (
                                         <motion.img
                                             key={idx}
@@ -262,7 +262,7 @@ const WorkDetail = () => {
                                             transition={{ delay: idx * 0.1 }}
                                             src={img}
                                             alt={`Iteration ${idx + 1}`}
-                                            className="w-full h-auto"
+                                            className="w-full max-h-[60vh] object-contain shadow-xl bg-muted/20 p-2"
                                         />
                                     ))}
                                 </div>
@@ -277,11 +277,11 @@ const WorkDetail = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-heading uppercase mb-16"
+                        className="text-3xl md:text-4xl font-heading uppercase mb-16 text-center"
                     >
                         Final Designs
                     </motion.h2>
-                    <div className="flex flex-col gap-8 md:gap-16">
+                    <div className="flex flex-col gap-12 md:gap-24 max-w-7xl mx-auto">
                         {project.images?.map((img, idx) => (
                             <motion.div
                                 key={idx}
@@ -289,12 +289,12 @@ const WorkDetail = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                                className="w-full relative aspect-auto"
+                                className="w-full relative aspect-auto flex justify-center"
                             >
                                 <img
                                     src={img}
                                     alt={`${project.title} detail ${idx + 1}`}
-                                    className="w-full h-auto object-cover"
+                                    className="w-full max-h-[85vh] object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] bg-card/30"
                                 />
                             </motion.div>
                         ))}

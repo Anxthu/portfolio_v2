@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Download } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 
 const Resume = () => {
@@ -17,19 +16,7 @@ const Resume = () => {
     <PageTransition>
       {/* White background for entire page */}
       <div className="min-h-screen bg-white">
-        {/* Dark navbar on white background */}
-        <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between section-padding py-5 bg-white/80 backdrop-blur-md border-b border-gray-200">
-          <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-wide text-gray-900 hover:text-gray-600 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            <span>BACK</span>
-          </Link>
-          
-          <span className="text-sm font-semibold tracking-wide text-gray-900">
-            ANANTHU© RESUME
-          </span>
-
-          <div className="w-20" />
-        </nav>
+        {/* Removed Dark navbar per request */}
 
         {/* Resume Content */}
         <div className="pt-24 pb-32 section-padding">

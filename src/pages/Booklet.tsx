@@ -10,13 +10,7 @@ const Booklet = () => {
         
         {/* Navigation Bar / Header */}
         <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 md:p-10 mix-blend-difference pointer-events-none">
-          <Link
-            to="/#about"
-            className="pointer-events-auto inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors uppercase tracking-[0.2em] text-xs font-semibold"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back
-          </Link>
+          {/* Global Back Button handles navigation */}
         </div>
 
         {/* Floating Download Button */}

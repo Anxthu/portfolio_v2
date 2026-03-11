@@ -7,7 +7,6 @@ import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
-import LoadingScreen from "./components/LoadingScreen";
 import Works from "./pages/Works";
 import WorkDetail from "./pages/WorkDetail";
 import Archives from "./pages/Archives";
@@ -19,6 +18,8 @@ import BlogEditor from "./pages/BlogEditor";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import Booklet from "./pages/Booklet";
+import GlobalSound from "./components/GlobalSound";
+import GlobalBackButton from "./components/GlobalBackButton";
 
 const queryClient = new QueryClient();
 
@@ -49,10 +50,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <LoadingScreen />
-      <SmoothScroll />
-      <CustomCursor />
       <BrowserRouter>
+        <SmoothScroll />
+        <CustomCursor />
+        <GlobalSound />
+        <GlobalBackButton />
         <ScrollToTop />
         <AnimatedRoutes />
       </BrowserRouter>

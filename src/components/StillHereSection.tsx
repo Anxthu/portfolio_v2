@@ -30,10 +30,10 @@ const StillHereSection = () => {
 
       <div className="relative w-full max-w-xl mx-auto flex items-center justify-center">
 
-        {/* Soft colorful blurred blob for 3D effect */}
+        {/* Soft colorful blurred blob for 3D spotlight effect */}
         <motion.div 
           style={{ y: yBlob }}
-          className="absolute inset-0 m-auto w-[60%] lg:w-[70%] aspect-square bg-gradient-to-tr from-indigo-500 via-purple-500 to-blue-500 opacity-[0.5] md:opacity-[0.6] rounded-full blur-[50px] md:blur-[70px] scale-[0.55] md:scale-[0.65] z-0 transition-transform duration-1000"
+          className="absolute inset-0 m-auto w-[30%] lg:w-[35%] aspect-square bg-gradient-to-tr from-white via-indigo-200 to-white opacity-[0.2] md:opacity-[0.25] rounded-full blur-[40px] md:blur-[60px] z-0 transition-transform duration-1000"
         />
 
         {/* The chair image */}
@@ -43,12 +43,12 @@ const StillHereSection = () => {
            viewport={{ once: true }}
            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
            style={{ y: yChair }}
-           className="relative z-10 w-full px-12 md:px-0"
+           className="relative z-10 w-full px-16 md:px-8 max-w-lg"
         >
           <img 
             src="/chair02.png" 
             alt="Chair" 
-            className="w-full h-auto object-contain xl:scale-110"
+            className="w-full h-auto object-contain"
           />
         </motion.div>
       </div>
@@ -69,15 +69,15 @@ const StillHereSection = () => {
           I help founders and startups move quickly and purposefully across product, web and brand design. Whether you're starting from scratch, launching your first minimum viable product or evolving an existing product, I bring the speed, clarity, and craft to help you get ahead without cutting corners.
         </p>
         
-        <div className="flex flex-col items-center gap-5 w-full max-w-sm mt-4">
-          <div className="flex items-center group w-full">
+        <div className="flex flex-col items-center mt-4">
+          <div className="flex items-center group">
             {/* Decorative piece */}
-            <div className="w-4 h-14 bg-transparent border-t-2 border-b-2 border-l-2 border-white/30 transition-colors group-hover:border-white/50" />
+            <div className="w-3 h-12 bg-transparent border-t-2 border-b-2 border-l-2 border-white/30 transition-colors group-hover:border-white/50" />
             
             {/* Action button */}
             <a 
               href="/contact" 
-              className="h-14 w-full bg-white text-black text-sm md:text-base font-semibold uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-gray-200 transition-colors"
+              className="h-12 px-10 bg-gradient-to-r from-white via-[#ffbaba] to-[#E52E2D] text-black text-sm font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-[0_0_30px_rgba(229,46,45,0.4)] transition-all shadow-lg rounded-none"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
               Start here

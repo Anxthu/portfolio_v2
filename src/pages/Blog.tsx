@@ -7,14 +7,14 @@ import { blogPosts } from "@/lib/blogData";
 const Blog = () => {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white text-black">
 
         <div className="section-padding pt-32 pb-24">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-5xl md:text-7xl font-bold text-foreground mb-6 uppercase font-heading tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-[#E52E2D] mb-6 uppercase font-heading tracking-tight"
           >
             BLOG
           </motion.h1>
@@ -22,7 +22,7 @@ const Blog = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-muted-foreground text-lg mb-16"
+            className="text-black/60 text-lg mb-16"
           >
             Design insights, process, and thoughts
           </motion.p>
@@ -39,7 +39,7 @@ const Blog = () => {
                   to={`/blog/${post.slug}`}
                   className="group block"
                 >
-                  <div className="relative aspect-square overflow-hidden mb-4 bg-muted">
+                  <div className="relative aspect-square overflow-hidden mb-4 bg-gray-100">
                     <img
                       src={post.image}
                       alt={post.title}
@@ -48,19 +48,19 @@ const Blog = () => {
                     />
                   </div>
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                    <span className="text-xs uppercase tracking-wider text-black/50">
                       {post.category}
                     </span>
-                    <span className="text-xs text-muted-foreground">•</span>
-                    <span className="text-xs text-muted-foreground">{post.date}</span>
+                    <span className="text-xs text-black/50">•</span>
+                    <span className="text-xs text-black/50">{post.date}</span>
                   </div>
-                  <h2 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h2 className="text-xl font-semibold text-black mb-2 group-hover:text-[#E52E2D] transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
+                  <p className="text-sm text-black/70 line-clamp-2">
                     {post.excerpt}
                   </p>
-                  <div className="mt-4 text-sm text-foreground group-hover:translate-x-1 transition-transform inline-block">
+                  <div className="mt-4 text-sm text-black group-hover:translate-x-1 transition-transform inline-block">
                     Read more →
                   </div>
                 </Link>

@@ -157,7 +157,7 @@ const IncomingCall = () => {
                 className="space-y-4"
               >
                 <p className="text-black leading-relaxed text-sm" style={{ fontFamily: 'Geist, sans-serif', fontWeight: 500 }}>
-                  I am a <span className="font-semibold text-black">creative generalist</span> from Bengaluru, India, <span className="text-black/50">specialised in creative direction, communication design, and brand strategy. My work spans across graphic design, 3D art, etc.</span>
+                  I am a <span className="font-semibold text-black">creative generalist</span> from Bengaluru, India, <span className="text-black/50">specialised in UI/UX Design, communication design, and brand strategy. My work spans across graphic design, 3D art, etc.</span>
                 </p>
                 <p className="text-black/50 leading-relaxed text-sm" style={{ fontFamily: 'Geist, sans-serif', fontWeight: 500 }}>
                   I believe perfection isn't born out of love. It's forged in frustration, obsession, and an unrelenting pursuit of greatness.
