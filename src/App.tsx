@@ -18,7 +18,7 @@ import BlogEditor from "./pages/BlogEditor";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import Booklet from "./pages/Booklet";
-import GlobalSound from "./components/GlobalSound";
+import Credits from "./pages/Credits";
 import GlobalBackButton from "./components/GlobalBackButton";
 
 const queryClient = new QueryClient();
@@ -39,6 +39,7 @@ const AnimatedRoutes = () => {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/blog-editor" element={<BlogEditor />} />
         <Route path="/booklet" element={<Booklet />} />
+        <Route path="/credits" element={<Credits />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
@@ -53,7 +54,6 @@ const App = () => (
       <BrowserRouter>
         <SmoothScroll />
         <CustomCursor />
-        <GlobalSound />
         <GlobalBackButton />
         <ScrollToTop />
         <AnimatedRoutes />

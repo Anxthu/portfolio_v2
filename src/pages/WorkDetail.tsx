@@ -360,6 +360,15 @@ const WorkDetail = () => {
                     </div>
                 </section>
 
+                {/* Scroll To Top Button */}
+                <button
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="fixed bottom-8 right-8 z-[100] w-12 h-12 bg-black/80 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-black hover:scale-110 transition-all shadow-xl cursor-pointer pointer-events-auto"
+                    aria-label="Scroll to top"
+                >
+                    <ArrowUp className="w-5 h-5" />
+                </button>
+
                 <Footer />
             </div>
         </PageTransition>

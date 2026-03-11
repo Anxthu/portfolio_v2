@@ -23,6 +23,11 @@ const SPAWN_DIST = 140;
 const IMAGE_W = 220;
 const IMAGE_H = 280;
 
+interface TrailElement extends HTMLDivElement {
+  _fadeTimer?: number | NodeJS.Timeout;
+  _raf?: number;
+}
+
 const HeroSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const trailRef = useRef<HTMLDivElement>(null);
@@ -116,8 +121,9 @@ const HeroSection = () => {
     imageIndex.current++;
 
     // Clear any pending fade timer
-    if ((el as any)._fadeTimer) clearTimeout((el as any)._fadeTimer);
-    if ((el as any)._raf) cancelAnimationFrame((el as any)._raf);
+    const trailEl = el as TrailElement;
+    if (trailEl._fadeTimer) clearTimeout(trailEl._fadeTimer);
+    if (trailEl._raf) cancelAnimationFrame(trailEl._raf);
 
     // Reset instantly
     el.style.transition = "none";
@@ -126,7 +132,7 @@ const HeroSection = () => {
     (el.firstChild as HTMLImageElement).src = src;
 
     // Use double-rAF for guaranteed reflow before animating
-    (el as any)._raf = requestAnimationFrame(() => {
+    trailEl._raf = requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         el.style.transition = `
           opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
@@ -136,7 +142,7 @@ const HeroSection = () => {
         el.style.transform = `translate3d(${x - IMAGE_W / 2}px, ${yPos - IMAGE_H / 2}px, 0) scale(1)`;
 
         // Fade out
-        (el as any)._fadeTimer = setTimeout(() => {
+        trailEl._fadeTimer = setTimeout(() => {
           el.style.transition = `
             opacity 1.6s cubic-bezier(0.25, 0.1, 0.25, 1),
             transform 1.6s cubic-bezier(0.25, 0.1, 0.25, 1)

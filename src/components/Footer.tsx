@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import MagneticButton from "./MagneticButton";
 
 const Footer = () => {
@@ -36,16 +37,13 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="text-right">
-          <p className="text-xs text-muted-foreground mb-2">
+        <div className="text-right flex flex-col items-end">
+          <p className="text-xs text-muted-foreground mb-4">
             © {new Date().getFullYear()} All rights reserved
           </p>
-          <p className="text-xs text-muted-foreground mb-2">
-            Photography by <a href="https://unsplash.com/@zablanca_clicks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">zablanca_clicks</a> on Unsplash
-          </p>
-          <p className="text-xs text-muted-foreground mb-4">
-            Ambient Drone UI Sound by ANANTHU
-          </p>
+          <Link to="/credits" className="text-xs text-muted-foreground hover:text-white transition-colors underline underline-offset-4 tracking-widest uppercase mb-4">
+            Credits
+          </Link>
           <p className="text-xs text-foreground/70 italic max-w-xs">
             Crafting digital experiences with precision and purpose
           </p>
