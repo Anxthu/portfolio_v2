@@ -91,17 +91,19 @@ portfolio/
 
 ## 🌐 Deployment
 
-1. Update the following in `index.html`:
-   - Replace `YOUR_GA_ID` with your Google Analytics ID
-   - Update `og:url` and `twitter:url` with your actual domain
-   - Update `og:image` path if needed
+This portfolio is deployed on **Cloudflare Pages**.
 
-2. Build the project:
-```bash
-npm run build
-```
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
-3. Deploy the `dist` folder to your hosting provider (Vercel, Netlify, etc.)
+Quick steps:
+1. Connect your GitHub repo to Cloudflare Pages
+2. Set build command: `npm run build`
+3. Set output directory: `dist`
+4. Deploy!
+
+Before deploying, update `index.html`:
+- Replace `YOUR_GA_ID` with your Google Analytics ID
+- Update `og:url` and `twitter:url` with your actual domain
 
 ## 🔧 Configuration
 
