@@ -56,12 +56,18 @@ const Booklet = () => {
             className="grid grid-cols-1 md:grid-cols-2 w-full h-[60vh] md:h-screen"
           >
             <div className="w-full h-full bg-black relative flex items-center justify-center p-12">
-               {/* Replace src with actual image later */}
-               <div className="w-full h-full border border-white/20 flex items-center justify-center text-white/50 text-sm">Image Placeholder 1</div>
+               <img 
+                 src="/Projects Mockups/Inari/Desktop - 4_opt.webp" 
+                 alt="Inari Desktop Design"
+                 className="w-full h-full object-contain"
+               />
             </div>
             <div className="w-full h-full bg-[#f0f0f0] relative flex items-center justify-center p-12">
-               {/* Replace src with actual image later */}
-               <div className="w-full h-full border border-black/10 flex items-center justify-center text-black/40 text-sm">Image Placeholder 2</div>
+               <img 
+                 src="/Projects Mockups/Linear Home/Linear Home Landing Page02_opt.webp" 
+                 alt="Linear Home Landing Page"
+                 className="w-full h-full object-contain"
+               />
             </div>
           </motion.div>
 
@@ -74,19 +80,18 @@ const Booklet = () => {
             className="grid grid-cols-1 md:grid-cols-2 w-full h-[60vh] md:h-screen"
           >
              <div className="w-full h-full bg-white relative flex items-center justify-center p-12">
-                {/* Replace src with actual image later */}
-               <div className="w-full h-full flex flex-col items-center justify-center">
-                 <div className="w-48 h-48 rounded-[3rem] border-8 border-gray-100 shadow-xl flex items-center justify-center mb-8 bg-white">
-                   <div className="w-24 h-24 rounded-full border-4 border-gray-800 bg-gray-900 flex items-center justify-center">
-                     <div className="w-12 h-12 rounded-full border border-gray-600 bg-black shadow-inner opacity-50"></div>
-                   </div>
-                 </div>
-                 <span className="text-gray-400 text-sm font-medium">Camera Detail Placeholder</span>
-               </div>
+               <img 
+                 src="/Projects Mockups/vayka/vayka smartwatch_opt.webp" 
+                 alt="Vayka Smartwatch Design"
+                 className="w-full h-full object-contain"
+               />
             </div>
             <div className="w-full h-full bg-[#0E2721] relative flex items-center justify-center p-12">
-                {/* Replace src with actual image later */}
-               <div className="w-full h-full border border-white/10 flex items-center justify-center text-white/50 text-sm">Isometric Desk Placeholder</div>
+               <img 
+                 src="/Projects Mockups/Pitbull/pitbullcase02_opt.webp" 
+                 alt="Pitbull Brand Campaign"
+                 className="w-full h-full object-contain"
+               />
             </div>
           </motion.div>
 
