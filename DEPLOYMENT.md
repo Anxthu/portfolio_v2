@@ -21,10 +21,13 @@ Use these exact settings:
 ```
 Project name: ananthu-portfolio (or your preferred name)
 Production branch: main
-Build command: npm run build
+Build command: npm install --legacy-peer-deps && npm run build
 Build output directory: dist
 Root directory: /
+Node version: 22.16.0
 ```
+
+**Important:** The project uses npm (not bun). The `.npmrc` file ensures proper dependency resolution.
 
 ### 3. Environment Variables (Optional)
 
@@ -57,6 +60,9 @@ Your project is already configured for Cloudflare Pages:
 - ✅ Vite build outputs to `dist/`
 - ✅ SPA routing handled by `_redirects` file
 - ✅ All assets properly referenced
+- ✅ `.npmrc` configured for legacy peer deps
+- ✅ `.node-version` specifies Node.js 22.16.0
+- ✅ Bun lockfiles removed to force npm usage
 
 ## Post-Deployment Checklist
 
