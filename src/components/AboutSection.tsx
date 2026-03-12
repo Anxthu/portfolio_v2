@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const onlineLinks = [
-  { label: "Email", value: "ananthupublications@gmail.com", link: "mailto:ananthupublications@gmail.com", text: "Email ↗" },
+  { label: "Email", value: "Say Hi", link: "mailto:ananthupublications@gmail.com", text: "Email ↗" },
   { label: "LinkedIn", value: "LinkedIn", link: "https://www.linkedin.com/in/ananthapadmanabhan-nair/", text: "Connect ↗" },
   { label: "Twitter", value: "Twitter", link: "https://x.com/ux_ananthu", text: "Follow ↗" },
   { label: "Instagram", value: "Instagram", link: "https://www.instagram.com/ux.ananthu/", text: "Follow ↗" },

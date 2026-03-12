@@ -185,7 +185,7 @@ const HeroSection = () => {
           ))}
         </div>
         <div className="flex justify-center gap-1.5 overflow-hidden flex-wrap w-full max-w-lg mx-auto">
-          {"UI/UX DESIGNER FROM BANGALORE CITY".split(" ").map((word, i) => (
+          {"UI/UX DESIGNER FROM BANGALORE".split(" ").map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}

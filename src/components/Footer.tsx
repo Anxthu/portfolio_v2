@@ -14,7 +14,7 @@ const Footer = () => {
       >
         <div>
           <p className="text-sm font-semibold text-foreground">ANANTHU©</p>
-          <p className="text-xs text-muted-foreground mt-1">UI/UX Designer — Bangalore City</p>
+          <p className="text-xs text-muted-foreground mt-1">UI/UX Designer — Bangalore</p>
         </div>
 
         <div className="flex flex-wrap gap-4 md:gap-8">
@@ -37,7 +37,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="text-right flex flex-col items-end">
+        <div className="text-left md:text-right flex flex-col items-start md:items-end">
           <p className="text-xs text-muted-foreground mb-4">
             © {new Date().getFullYear()} All rights reserved
           </p>
