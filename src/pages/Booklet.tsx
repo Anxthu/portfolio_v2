@@ -101,9 +101,13 @@ const Booklet = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="w-full h-[60vh] md:h-[120vh] bg-[#f8f8f8] relative flex items-center justify-center"
+            className="w-full h-[60vh] md:h-[120vh] bg-[#f8f8f8] relative flex items-center justify-center p-8 md:p-16"
           >
-              <div className="text-gray-400 text-lg font-medium tracking-wide">Full Width Bike Render Placeholder</div>
+              <img 
+                src="/Projects Mockups/Linear Home/Linear Home Landing Page_opt.webp" 
+                alt="Linear Home Full Width Design"
+                className="w-full h-full object-contain"
+              />
           </motion.div>
 
           {/* Spacer for bottom scrolling past the floating button */}
