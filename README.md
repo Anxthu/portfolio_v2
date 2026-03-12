@@ -117,7 +117,9 @@ npm run build
 
 ## 📄 License
 
-See [LICENSE](./LICENSE) file for details.
+Copyright © 2024 ANANTHU. All Rights Reserved.
+
+This is a private portfolio project. Unauthorized copying, modification, distribution, or use of this code is strictly prohibited.
 
 ## 👤 Author
 
