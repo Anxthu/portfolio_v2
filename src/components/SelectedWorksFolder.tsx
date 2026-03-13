@@ -12,6 +12,7 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
   const folderRef = React.useRef(null);
   
   // Trigger true when the folder is roughly in the middle of the viewport
+  // We remove 'once: true' so it toggles on AND off as the user scrolls
   const isInView = useInView(folderRef, { margin: "-40% 0px -40% 0px" });
   
   // Strict check for mobile/tablet to ensure desktop never auto-triggers scroll events
@@ -52,13 +53,13 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
       <div className="relative w-full max-w-[320px] h-full transition-transform duration-500 hover:-translate-y-2" style={{ transformStyle: 'preserve-3d' }}>
         
         {/* FOLDER BACK COVER */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#2a2a2a] via-[#222] to-[#1a1a1a] rounded-xl border-t border-l border-[#3a3a3a] shadow-[inset_0_4px_20px_rgba(0,0,0,0.8)] transform translate-z-[-30px]">
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#e5e5e5] via-[#d4d4d4] to-[#a3a3a3] rounded-xl border-t border-l border-white/60 shadow-[inset_0_4px_20px_rgba(0,0,0,0.1)] transform translate-z-[-30px]">
           {/* Folder spine/depth effect at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-xl border-b border-[#333]"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-black/20 to-transparent rounded-b-xl border-b border-[#a0a0a0]"></div>
           
           {/* Tab */}
-          <div className="absolute -top-10 left-4 w-40 h-10 bg-gradient-to-b from-[#2a2a2a] to-[#252525] rounded-t-xl border-t border-x border-[#3a3a3a] overflow-hidden flex items-end justify-center pb-2 z-[-1] shadow-[inset_0_2px_4px_rgba(255,255,255,0.05)]">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#a0a0a0]">
+          <div className="absolute -top-10 left-4 w-40 h-10 bg-gradient-to-b from-[#e5e5e5] to-[#dcdcdc] rounded-t-xl border-t border-x border-white/60 overflow-hidden flex items-end justify-center pb-2 z-[-1] shadow-[inset_0_2px_4px_rgba(255,255,255,0.4)]">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#444] drop-shadow-sm">
               {folder.label}
             </span>
           </div>
@@ -149,9 +150,10 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
           <motion.div
             className="w-full h-full rounded-xl overflow-hidden flex flex-col items-center justify-center relative border border-white/[0.08]"
             style={{
-              // Base colors using a highly realistic faux-leather/plastic gradient
-              background: 'linear-gradient(135deg, #3d3d3d 0%, #292929 40%, #1f1f1f 100%)',
-              boxShadow: '0 -2px 10px rgba(255,255,255,0.03) inset, 0 10px 40px rgba(0,0,0,0.6)',
+              // Shiny silver/off-white folder gradients
+              background: 'linear-gradient(135deg, rgba(235,235,235,0.95) 0%, rgba(215,215,215,0.95) 40%, rgba(180,180,180,0.95) 100%)',
+              backdropFilter: 'blur(10px)',
+              boxShadow: '0 -2px 10px rgba(255,255,255,0.6) inset, 0 10px 40px rgba(0,0,0,0.4)',
             }}
             animate={{
               rotateX: isOpen ? -35 : 0, // Flap falls open significantly more for a deeper 3D effect
@@ -172,15 +174,13 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
             <motion.div
               animate={{ opacity: isOpen ? 0 : 1, y: isOpen ? 10 : 0 }}
               transition={{ duration: 0.2 }}
-              className="flex flex-col items-center justify-center pointer-events-none relative z-10"
+              className="flex flex-col items-center justify-center pointer-events-none relative z-10 w-full h-full"
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-b from-[#333] to-[#222] border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_2px_10px_rgba(0,0,0,0.5),0_5px_15px_rgba(0,0,0,0.4)]">
-                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                </svg>
+              <div className="absolute top-4 right-5 bg-black/10 backdrop-blur-sm border border-black/20 rounded-full px-3 py-1 shadow-sm">
+                <p className="text-[10px] text-black/80 font-bold tracking-widest uppercase shadow-sm">
+                  {folder.works.length} {folder.works.length === 1 ? 'Item' : 'Items'}
+                </p>
               </div>
-              <p className="text-sm text-gray-300 font-bold tracking-widest uppercase">Hover to open</p>
-              <p className="text-[10px] text-gray-500 mt-2 font-medium tracking-widest">{folder.works.length} {folder.works.length === 1 ? 'Project' : 'Projects'}</p>
             </motion.div>
 
             {/* Specular highlight that moves on open */}
