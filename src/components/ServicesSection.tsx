@@ -6,13 +6,13 @@ const services = [
     title: "UI/UX DESIGN",
     description:
       "I craft intuitive and engaging user experiences through thoughtful interface design, user research, and interaction patterns that prioritize usability and delight.",
-    image: "/service02.jpg",
+    image: "/service02.webp",
   },
   {
     title: "BRAND IDENTITY",
     description:
       "From logos and typography to colors and brand systems, I design distinctive visual identities that bring your brand's personality to life across every touchpoint.",
-    image: "/service01.png",
+    image: "/service01.webp",
   },
   {
     title: "ART DIRECTION",
@@ -76,7 +76,7 @@ const ServicesSection = () => {
                 className="absolute inset-0 w-full h-full object-cover"
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              />
+               loading="lazy" />
 
               {/* Dark Overlay that appears on hover */}
               <div

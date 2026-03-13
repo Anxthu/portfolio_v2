@@ -148,11 +148,9 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
         {/* It covers the entire h-full area, hiding the cards at the bottom when closed */}
         <Link to="/works" className="absolute inset-0 w-full h-full z-50 pointer-events-auto origin-bottom" style={{ transformStyle: 'preserve-3d' }}>
           <motion.div
-            className="w-full h-full rounded-xl overflow-hidden flex flex-col items-center justify-center relative border border-white/[0.08]"
             style={{
               // Shiny silver/off-white folder gradients
               background: 'linear-gradient(135deg, rgba(235,235,235,0.95) 0%, rgba(215,215,215,0.95) 40%, rgba(180,180,180,0.95) 100%)',
-              backdropFilter: 'blur(10px)',
               boxShadow: '0 -2px 10px rgba(255,255,255,0.6) inset, 0 10px 40px rgba(0,0,0,0.4)',
             }}
             animate={{
@@ -162,6 +160,7 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
               duration: 0.5,
               ease: [0.25, 1, 0.5, 1] 
             }}
+            className="w-full h-full rounded-xl overflow-hidden flex flex-col items-center justify-center relative border border-white/[0.08] will-change-transform"
           >
             {/* Realistic rim lighting on the top edge */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -176,7 +175,7 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
               transition={{ duration: 0.2 }}
               className="flex flex-col items-center justify-center pointer-events-none relative z-10 w-full h-full"
             >
-              <div className="absolute top-4 right-5 bg-black/10 backdrop-blur-sm border border-black/20 rounded-full px-3 py-1 shadow-sm">
+              <div className="absolute top-4 right-5 bg-black/10 border border-black/20 rounded-full px-3 py-1 shadow-sm">
                 <p className="text-[10px] text-black/80 font-bold tracking-widest uppercase shadow-sm">
                   {folder.works.length} {folder.works.length === 1 ? 'Item' : 'Items'}
                 </p>

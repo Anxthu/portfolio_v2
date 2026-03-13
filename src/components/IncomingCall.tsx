@@ -55,16 +55,16 @@ const IncomingCall = () => {
               <motion.div
                 animate={{ y: [0, -2, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="bg-white/80 backdrop-blur-2xl border border-white/50 rounded-full px-4 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative"
+                className="bg-white/80 backdrop-blur-2xl border border-white/50 rounded-full px-3 py-2.5 sm:px-4 sm:py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative max-w-full"
               >
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center justify-between gap-2 sm:gap-4">
                   {/* Left: Profile + Info */}
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
                     {/* Profile Image - More prominent */}
                     <motion.div
                       animate={{ scale: [1, 1.05, 1] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
-                      className="w-12 h-12 rounded-full overflow-hidden border-2 border-green-500/30 flex-shrink-0"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-green-500/30 flex-shrink-0"
                     >
                       <img
                         src="/2R7A2720.webp"
@@ -74,39 +74,39 @@ const IncomingCall = () => {
                     </motion.div>
 
                     {/* Caller Info */}
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-base font-bold text-black truncate">
+                    <div className="flex-1 min-w-0 pr-1 sm:pr-0">
+                      <h3 className="text-sm sm:text-base font-bold text-black truncate">
                         Ananthu calling...
                       </h3>
                       <div className="flex items-center gap-1.5 mt-0.5">
                         <motion.div
                           animate={{ opacity: [0.3, 1, 0.3] }}
                           transition={{ duration: 1.5, repeat: Infinity }}
-                          className="flex items-center gap-1"
+                          className="flex items-center gap-1 flex-shrink-0"
                         >
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+                          <div className="w-1.5 h-1.5 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full" />
+                          <div className="w-1.5 h-1.5 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full" />
+                          <div className="w-1.5 h-1.5 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full" />
                         </motion.div>
-                        <span className="text-xs font-medium text-black/60">Answer to connect</span>
+                        <span className="text-[10px] sm:text-xs font-medium text-black/60 truncate whitespace-nowrap">Answer to connect</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Right: Action Buttons - Larger */}
-                  <div className="flex items-center gap-2 flex-shrink-0">
+                  <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
                     {/* Decline Button */}
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={handleDecline}
-                      className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-500/50 transition-shadow"
+                      className="w-9 h-9 sm:w-10 sm:h-10 bg-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-500/50 transition-shadow flex-shrink-0"
                     >
-                      <PhoneOff className="w-4 h-4 text-white" />
+                      <PhoneOff className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                     </motion.button>
 
                     {/* Answer Button */}
-                    <div className="relative">
+                    <div className="relative flex-shrink-0">
                       {/* Pulsing ring behind answer button */}
                       <motion.div 
                         animate={{ scale: [1, 1.5], opacity: [0.6, 0] }}
@@ -119,13 +119,13 @@ const IncomingCall = () => {
                         animate={{ scale: [1, 1.08, 1] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
                         onClick={handleAnswer}
-                        className="relative w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/50 transition-shadow z-10"
+                        className="relative w-9 h-9 sm:w-10 sm:h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/50 transition-shadow z-10"
                       >
                         <motion.div
                           animate={{ rotate: [0, -15, 15, -15, 15, 0] }}
                           transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1 }}
                         >
-                          <Phone className="w-4 h-4 text-white" />
+                          <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                         </motion.div>
                       </motion.button>
                     </div>

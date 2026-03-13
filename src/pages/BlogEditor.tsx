@@ -181,7 +181,7 @@ const BlogEditor = () => {
                                                     src={imageUrl}
                                                     alt={title}
                                                     className="w-full h-full object-cover"
-                                                />
+                                                 loading="lazy" />
                                             )}
                                         </div>
                                         <div className="flex items-center gap-3 mb-3">

@@ -102,7 +102,7 @@ const Bookshelf = () => {
 
                                 {/* Cover Image Background */}
                                 <div className="absolute inset-0 z-0">
-                                    <img src={book.image} alt={book.title} className="accordion-cover-image" />
+                                    <img src={book.image} alt={book.title} className="accordion-cover-image"  loading="lazy" />
                                     {/* Inner spine shadow to simulate depth */}
                                     <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-black/80 to-transparent pointer-events-none" />
                                     {/* Bottom gradient to make text readable */}

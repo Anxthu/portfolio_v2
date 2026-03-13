@@ -60,14 +60,14 @@ const Booklet = () => {
                  src="/Projects Mockups/Inari/Desktop - 4_opt.webp" 
                  alt="Inari Desktop Design"
                  className="w-full h-full object-contain"
-               />
+                loading="lazy" />
             </div>
             <div className="w-full h-full bg-[#f0f0f0] relative flex items-center justify-center p-12">
                <img 
                  src="/Projects Mockups/Linear Home/Linear Home Landing Page02_opt.webp" 
                  alt="Linear Home Landing Page"
                  className="w-full h-full object-contain"
-               />
+                loading="lazy" />
             </div>
           </motion.div>
 
@@ -84,14 +84,14 @@ const Booklet = () => {
                  src="/Projects Mockups/vayka/vayka smartwatch_opt.webp" 
                  alt="Vayka Smartwatch Design"
                  className="w-full h-full object-contain"
-               />
+                loading="lazy" />
             </div>
             <div className="w-full h-full bg-[#0E2721] relative flex items-center justify-center p-12">
                <img 
                  src="/Projects Mockups/Pitbull/pitbullcase02_opt.webp" 
                  alt="Pitbull Brand Campaign"
                  className="w-full h-full object-contain"
-               />
+                loading="lazy" />
             </div>
           </motion.div>
 
@@ -107,7 +107,7 @@ const Booklet = () => {
                 src="/Projects Mockups/Linear Home/Linear Home Landing Page_opt.webp" 
                 alt="Linear Home Full Width Design"
                 className="w-full h-full object-contain"
-              />
+               loading="lazy" />
           </motion.div>
 
           {/* Spacer for bottom scrolling past the floating button */}

@@ -46,10 +46,10 @@ const StillHereSection = () => {
            className="relative z-10 w-full px-16 md:px-8 max-w-lg"
         >
           <img 
-            src="/chair02.png" 
+            src="/chair02.webp" 
             alt="Chair" 
             className="w-full h-auto object-contain"
-          />
+           loading="lazy" />
         </motion.div>
       </div>
 

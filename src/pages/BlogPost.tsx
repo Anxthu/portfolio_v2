@@ -79,7 +79,7 @@ const BlogPost = () => {
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 p-[2px]">
                           <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                            <img src="/2R7A2720.JPG" alt="Profile" className="w-full h-full object-cover" />
+                            <img src="/2R7A2720.webp" alt="Profile" className="w-full h-full object-cover"  loading="lazy" />
                           </div>
                         </div>
                         <span className="text-sm font-semibold">ux.ananthu</span>
@@ -102,7 +102,7 @@ const BlogPost = () => {
                       src={images[currentImageIndex]}
                       alt={`${post.title} - Image ${currentImageIndex + 1}`}
                       className="w-full h-full object-contain"
-                    />
+                     loading="lazy" />
 
                     {/* Navigation Arrows */}
                     {totalImages > 1 && (

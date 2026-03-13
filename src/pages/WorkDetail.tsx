@@ -81,7 +81,7 @@ const WorkDetail = () => {
                             src={project.image}
                             alt={project.title}
                             className="w-full h-full object-cover"
-                        />
+                         loading="lazy" />
                         {/* Gradient overlay for readability */}
                         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                     </motion.div>
@@ -194,7 +194,7 @@ const WorkDetail = () => {
                                             src={img}
                                             alt={`Research ${idx + 1}`}
                                             className="w-full max-h-[60vh] object-contain shadow-xl bg-muted/20 p-2"
-                                        />
+                                         loading="lazy" />
                                     ))}
                                 </div>
                             </div>
@@ -217,7 +217,7 @@ const WorkDetail = () => {
                                             src={img}
                                             alt={`Wireframe ${idx + 1}`}
                                             className="w-full max-h-[60vh] object-contain shadow-xl bg-muted/20 p-2"
-                                        />
+                                         loading="lazy" />
                                     ))}
                                 </div>
                             </div>
@@ -240,7 +240,7 @@ const WorkDetail = () => {
                                             src={img}
                                             alt={`Design System ${idx + 1}`}
                                             className="w-full max-h-[80vh] object-contain shadow-2xl bg-muted/10 p-4"
-                                        />
+                                         loading="lazy" />
                                     ))}
                                 </div>
                             </div>
@@ -263,7 +263,7 @@ const WorkDetail = () => {
                                             src={img}
                                             alt={`Iteration ${idx + 1}`}
                                             className="w-full max-h-[60vh] object-contain shadow-xl bg-muted/20 p-2"
-                                        />
+                                         loading="lazy" />
                                     ))}
                                 </div>
                             </div>
@@ -295,7 +295,7 @@ const WorkDetail = () => {
                                     src={img}
                                     alt={`${project.title} detail ${idx + 1}`}
                                     className="w-full max-h-[85vh] object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] bg-card/30"
-                                />
+                                 loading="lazy" />
                             </motion.div>
                         ))}
                     </div>
@@ -314,7 +314,7 @@ const WorkDetail = () => {
                                     src={previousProject.image}
                                     alt={previousProject.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                                 loading="lazy" />
                                 <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="absolute inset-0 flex flex-col justify-center items-start p-8">
                                     <div className="flex items-center gap-2 text-muted-foreground mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -341,7 +341,7 @@ const WorkDetail = () => {
                                     src={nextProject.image}
                                     alt={nextProject.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                                 loading="lazy" />
                                 <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="absolute inset-0 flex flex-col justify-center items-end p-8 text-right">
                                     <div className="flex items-center gap-2 text-muted-foreground mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

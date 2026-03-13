@@ -73,7 +73,7 @@ const Archives = () => {
                     src={projects[hoveredIndex].images[0]}
                     alt={projects[hoveredIndex].title}
                     className="w-full h-full object-cover rounded-none"
-                  />
+                   loading="lazy" />
                 </motion.div>
               )}
             </AnimatePresence>

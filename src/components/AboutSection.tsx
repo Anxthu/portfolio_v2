@@ -66,10 +66,10 @@ const AboutSection = () => {
               className="mt-8 mb-4 w-full overflow-hidden rounded-md"
             >
               <img
-                src="/2R7A2720.JPG"
+                src="/2R7A2720.webp"
                 alt="Portrait"
                 className="w-full h-auto object-cover object-center mx-auto filter grayscale hover:grayscale-0 transition-all duration-700"
-              />
+               loading="lazy" />
             </motion.div>
           </div>
         </div>
@@ -109,10 +109,10 @@ const AboutSection = () => {
               className="w-full rounded-md overflow-hidden mb-3"
             >
               <img
-                src="/Frame 11.png"
+                src="/Frame 11.webp"
                 alt="Bengaluru"
                 className="w-full h-64 md:h-80 object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
-              />
+               loading="lazy" />
             </motion.div>
             <motion.span
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }}

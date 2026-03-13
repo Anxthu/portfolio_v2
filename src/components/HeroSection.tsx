@@ -3,13 +3,13 @@ import { useRef, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 const heroImages = [
-  "/traileffect/Frame 3.jpg",
-  "/traileffect/Frame 4.jpg",
-  "/traileffect/Frame 5.jpg",
-  "/traileffect/Frame 6.jpg",
-  "/traileffect/Frame 7.jpg",
-  "/traileffect/Frame 8.jpg",
-  "/traileffect/Frame 9.jpg",
+  "/traileffect/Frame 3.webp",
+  "/traileffect/Frame 4.webp",
+  "/traileffect/Frame 5.webp",
+  "/traileffect/Frame 6.webp",
+  "/traileffect/Frame 7.webp",
+  "/traileffect/Frame 8.webp",
+  "/traileffect/Frame 9.webp",
 ];
 
 // Pre-load images so they appear instantly
