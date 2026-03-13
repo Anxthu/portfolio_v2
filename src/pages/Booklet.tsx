@@ -64,9 +64,9 @@ const Booklet = () => {
             </div>
             <div className="w-full h-full bg-[#f0f0f0] relative flex items-center justify-center p-12">
                <img 
-                 src="/Frame 11.png" 
-                 alt="Linear Home Frame Design"
-                 className="w-full h-full object-contain shadow-xl"
+                 src="/Projects Mockups/Linear Home/Linear Home Landing Page02_opt.webp" 
+                 alt="Linear Home Landing Page"
+                 className="w-full h-full object-contain"
                 loading="lazy" />
             </div>
           </motion.div>
@@ -104,10 +104,10 @@ const Booklet = () => {
             className="w-full h-[60vh] md:h-[120vh] bg-[#f8f8f8] relative flex items-center justify-center p-8 md:p-16"
           >
               <img 
-                src="/Projects Mockups/Linear Home/Linear Home Landing Page_opt.webp" 
-                alt="Linear Home Full Width Design"
+                src="/Frame 11.png" 
+                alt="Frame Design"
                 className="w-full h-full object-contain"
-               loading="lazy" />
+              />
           </motion.div>
 
           {/* Spacer for bottom scrolling past the floating button */}
