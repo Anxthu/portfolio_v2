@@ -22,18 +22,34 @@ const Archives = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-white text-black">
+      <div className="min-h-screen bg-white text-black relative" style={{ fontFamily: 'Geist, sans-serif' }}>
 
-        <div className="section-padding pt-32 pb-24">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-5xl md:text-7xl font-bold text-[#E52E2D] mb-16 uppercase font-heading tracking-tight"
-          >
-            ARCHIVES
-          </motion.h1>
+        {/* Hero Section - Booklet Style */}
+        <div className="w-full min-h-[60vh] md:min-h-[80vh] flex flex-col justify-between p-6 md:p-12 lg:p-20 relative">
+          <div className="max-w-[1400px] mt-24">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-[#E52E2D] font-bold text-4xl md:text-6xl lg:text-[85px] leading-[0.95] tracking-tight"
+            >
+              A complete archive of projects, experiments, and creative explorations.
+            </motion.h1>
+          </div>
+          <div className="w-full flex justify-end mt-20 pb-16 md:pb-10">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-[#E52E2D] font-bold text-xs md:text-sm tracking-tight"
+            >
+              Archives — Every project tells a story. © 2026
+            </motion.p>
+          </div>
+        </div>
 
+        {/* Archives List */}
+        <div className="section-padding pb-24">
           <div
             ref={containerRef}
             onMouseMove={handleMouseMove}
@@ -66,22 +82,23 @@ const Archives = () => {
               <Link to={`/works/${project.id}`} key={project.id}>
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.04 }}
                   className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-border group cursor-pointer hover:bg-accent/10 transition-colors duration-300 px-4 md:px-6"
                   onMouseEnter={() => setHoveredIndex(i)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 mb-2 md:mb-0">
-                    <span className="text-sm text-black/50 w-12 font-mono">
+                    <span className="text-sm text-black/50 w-12 font-mono font-bold">
                       {(i + 1).toString().padStart(2, "0")}
                     </span>
-                    <span className="text-2xl md:text-4xl font-heading uppercase tracking-tight text-black group-hover:text-[#E52E2D] transition-colors">
+                    <span className="text-2xl md:text-4xl font-bold uppercase tracking-tight text-black group-hover:text-[#E52E2D] transition-colors">
                       {project.title}
                     </span>
                   </div>
                   <div className="flex items-center gap-8 pl-16 md:pl-0">
-                    <span className="text-sm text-black/50 uppercase tracking-wider">
+                    <span className="text-sm text-black/50 uppercase tracking-wider font-bold">
                       {project.category}
                     </span>
                     {project.isOngoing && (

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import MagneticButton from "./MagneticButton";
+import { Instagram, Twitter, Linkedin, Dribbble } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -17,23 +17,23 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground mt-1">UI/UX Designer — Bangalore</p>
         </div>
 
-        <div className="flex flex-wrap gap-4 md:gap-8">
+        <div className="flex gap-6">
           {[
-            { name: "Instagram", url: "https://www.instagram.com/ux.ananthu/" },
-            { name: "X", url: "https://x.com/ux_ananthu" },
-            { name: "LinkedIn", url: "https://www.linkedin.com/in/ananthapadmanabhan-nair/" },
-            { name: "Dribbble", url: "https://dribbble.com/uxananthu" }
+            { name: "Instagram", url: "https://www.instagram.com/ux.ananthu/", icon: Instagram },
+            { name: "X", url: "https://x.com/ux_ananthu", icon: Twitter },
+            { name: "LinkedIn", url: "https://www.linkedin.com/in/ananthapadmanabhan-nair/", icon: Linkedin },
+            { name: "Dribbble", url: "https://dribbble.com/uxananthu", icon: Dribbble }
           ].map((social) => (
-            <MagneticButton key={social.name}>
-              <a
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-link"
-              >
-                {social.name}
-              </a>
-            </MagneticButton>
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#E52E2D] transition-colors"
+              aria-label={social.name}
+            >
+              <social.icon className="w-5 h-5" />
+            </a>
           ))}
         </div>
 
