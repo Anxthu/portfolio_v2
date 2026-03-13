@@ -61,30 +61,85 @@ const StillHereSection = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="mt-16 md:mt-24 flex flex-col items-center text-center max-w-2xl px-4 z-10"
       >
-        <h3 className="text-white font-semibold text-sm md:text-base mb-6" style={{ fontFamily: 'Geist, sans-serif' }}>
-          I saved you a seat 👀
-        </h3>
-        
-        <p className="text-white/80 text-sm md:text-base leading-relaxed mb-12 max-w-xl mx-auto" style={{ fontFamily: 'Geist, sans-serif' }}>
-          I help founders and startups move quickly and purposefully across product, web and brand design. Whether you're starting from scratch, launching your first minimum viable product or evolving an existing product, I bring the speed, clarity, and craft to help you get ahead without cutting corners.
+        {/* Supercut Text Shimmer Effect (Reading Guide) */}
+        <p className="text-sm md:text-[17px] leading-relaxed mb-12 max-w-xl mx-auto font-medium" style={{ fontFamily: 'Geist, sans-serif' }}>
+          {"I help founders and startups move quickly and purposefully across product, web and brand design. Whether you're starting from scratch, launching your first minimum viable product or evolving an existing product, I bring the speed, clarity, and craft to help you get ahead without cutting corners.".split(" ").map((word, i, arr) => {
+            // Calculate timing for each word to create a continuous sweeping effect
+            // We use 75% of the loop for the sweep, and 25% for a pause at the end.
+            const p = (i / arr.length) * 0.75;
+            const shimmerSpread = 0.08; // Width of the highlight (slightly wider for smoothness)
+            
+            return (
+              <motion.span
+                key={i}
+                animate={{
+                  color: [
+                    "rgba(255, 255, 255, 0.3)", // default dark
+                    "rgba(255, 255, 255, 0.3)", // hold dark until sweep nears
+                    "rgba(255, 255, 255, 1)",   // bright highlight peak
+                    "rgba(255, 255, 255, 0.3)", // return to dark
+                    "rgba(255, 255, 255, 0.3)"  // hold dark until loop ends
+                  ]
+                }}
+                transition={{
+                  duration: 10, // 10-second total loop for a slower, smoother read
+                  repeat: Infinity,
+                  ease: "easeInOut", // smooth easing
+                  times: [
+                    0, 
+                    Math.max(0, p - shimmerSpread), 
+                    p, 
+                    Math.min(1, p + shimmerSpread), 
+                    1
+                  ]
+                }}
+              >
+                {word}{" "}
+              </motion.span>
+            );
+          })}
         </p>
         
-        <div className="flex flex-col items-center mt-4">
-          <div className="flex items-center group">
-            {/* Decorative piece */}
-            <div className="w-3 h-12 bg-transparent border-t-2 border-b-2 border-l-2 border-white/30 transition-colors group-hover:border-white/50" />
+        <style>
+          {`
+            @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+            .pixel-text {
+              font-family: 'VT323', monospace;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: #cccccc;
+              text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+            }
+          `}
+        </style>
+        <div className="flex flex-col items-center mt-12 pb-12">
+          <div className="relative group flex items-center justify-center">
             
-            {/* Action button */}
-            <a 
-              href="/contact" 
-              className="h-12 px-10 bg-gradient-to-r from-white via-[#ffbaba] to-[#E52E2D] text-black text-sm font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-[0_0_30px_rgba(229,46,45,0.4)] transition-all shadow-lg rounded-none"
-              style={{ fontFamily: 'Geist, sans-serif' }}
-            >
-              Start here
-              <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
-                <path d="M1 11L11 1M11 1H1M11 1V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
+            {/* Rainbow Glow Aura */}
+            <div className="absolute -inset-6 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-green-500/30 rounded-full blur-[24px] opacity-40 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none"></div>
+            <div className="absolute -inset-2 bg-gradient-to-bl from-pink-400/20 via-white/10 to-blue-400/20 rounded-[28px] blur-md opacity-50 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none"></div>
+            
+            {/* Outer frosted/milky casing */}
+            <div className="relative p-[3px] rounded-[24px] bg-gradient-to-b from-white/10 via-white/5 to-white/10 shadow-[0_15px_35px_rgba(0,0,0,0.8),inset_0_1px_2px_rgba(255,255,255,0.3)] backdrop-blur-md">
+              
+              {/* Dark Button Base (Convex) */}
+              <a 
+                href="/contact" 
+                className="relative block h-16 w-56 sm:w-64 rounded-[21px] bg-gradient-to-b from-[#3a3a3a] to-[#1c1c1c] shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),inset_0_-1px_1px_rgba(0,0,0,0.8)] border border-[#000] overflow-hidden transition-transform duration-150 active:scale-[0.97]"
+              >
+                {/* Recessed Pill Track (Concave) */}
+                <div className="absolute inset-x-2 inset-y-2 rounded-full bg-gradient-to-b from-[#0f0f0f] via-[#151515] to-[#252525] shadow-[inset_0_4px_8px_rgba(0,0,0,0.9),_0_1px_0_rgba(255,255,255,0.06)] flex items-center justify-center border-t border-black/80 pointer-events-none">
+                  
+                  {/* Text */}
+                  <div className="pixel-text flex items-center justify-center gap-[6px] text-lg lg:text-xl group-hover:text-white transition-colors duration-300">
+                    <span className="text-xl lg:text-2xl leading-none mb-0.5 opacity-60 font-sans font-light">+</span> 
+                    <span>Start here</span>
+                  </div>
+
+                </div>
+              </a>
+
+            </div>
           </div>
         </div>
       </motion.div>
