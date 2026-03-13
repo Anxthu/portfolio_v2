@@ -2,7 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import GooeyTransition from "@/components/GooeyTransition";
 import IncomingCall from "@/components/IncomingCall";
 import ReverseGooeyTransition from "@/components/ReverseGooeyTransition";
-import SelectedWorks from "@/components/SelectedWorks";
+import SelectedWorksFolder from "@/components/SelectedWorksFolder";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import StillHereSection from "@/components/StillHereSection";
@@ -30,7 +30,7 @@ const Index = () => {
         
         {/* Rest of sections with dark background #141414 */}
         <div className="bg-[#141414]">
-          <SelectedWorks />
+          <SelectedWorksFolder />
           <ServicesSection />
           <AboutSection />
           <StillHereSection />
