@@ -10,8 +10,8 @@ const Blog = () => {
       <div className="min-h-screen bg-white text-black relative" style={{ fontFamily: 'Geist, sans-serif' }}>
 
         {/* Hero Section - Booklet Style */}
-        <div className="w-full min-h-[60vh] md:min-h-[80vh] flex flex-col justify-between p-6 md:p-12 lg:p-20 relative">
-          <div className="max-w-[1400px] mt-24">
+        <div className="w-full min-h-[70vh] md:min-h-[85vh] flex flex-col justify-between p-6 md:p-12 lg:p-20 relative">
+          <div className="max-w-[1400px] mt-32 md:mt-40">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Blog = () => {
               Design insights, process, and thoughts from my journey as a UI/UX designer.
             </motion.h1>
           </div>
-          <div className="w-full flex justify-end mt-20 pb-16 md:pb-10">
+          <div className="w-full flex justify-end mt-20 pb-20 md:pb-16">
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -34,8 +34,8 @@ const Blog = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="section-padding pb-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="section-padding py-24 md:py-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
             {blogPosts.map((post, i) => (
               <motion.div
                 key={post.slug}
@@ -56,20 +56,20 @@ const Blog = () => {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-4">
                     <span className="text-xs uppercase tracking-wider text-black/50 font-bold">
                       {post.category}
                     </span>
                     <span className="text-xs text-black/50">•</span>
                     <span className="text-xs text-black/50">{post.date}</span>
                   </div>
-                  <h2 className="text-xl font-semibold text-black mb-2 group-hover:text-[#E52E2D] transition-colors">
+                  <h2 className="text-xl font-semibold text-black mb-3 group-hover:text-[#E52E2D] transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-black/70 line-clamp-2">
+                  <p className="text-sm text-black/70 line-clamp-2 mb-4">
                     {post.excerpt}
                   </p>
-                  <div className="mt-4 text-sm text-black group-hover:translate-x-1 transition-transform inline-block">
+                  <div className="mt-auto text-sm text-black group-hover:translate-x-1 transition-transform inline-block">
                     Read more →
                   </div>
                 </Link>

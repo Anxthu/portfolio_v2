@@ -25,8 +25,8 @@ const Archives = () => {
       <div className="min-h-screen bg-white text-black relative" style={{ fontFamily: 'Geist, sans-serif' }}>
 
         {/* Hero Section - Booklet Style */}
-        <div className="w-full min-h-[60vh] md:min-h-[80vh] flex flex-col justify-between p-6 md:p-12 lg:p-20 relative">
-          <div className="max-w-[1400px] mt-24">
+        <div className="w-full min-h-[70vh] md:min-h-[85vh] flex flex-col justify-between p-6 md:p-12 lg:p-20 relative">
+          <div className="max-w-[1400px] mt-32 md:mt-40">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const Archives = () => {
               A complete archive of projects, experiments, and creative explorations.
             </motion.h1>
           </div>
-          <div className="w-full flex justify-end mt-20 pb-16 md:pb-10">
+          <div className="w-full flex justify-end mt-20 pb-20 md:pb-16">
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ const Archives = () => {
         </div>
 
         {/* Archives List */}
-        <div className="section-padding pb-24">
+        <div className="section-padding py-24 md:py-32">
           <div
             ref={containerRef}
             onMouseMove={handleMouseMove}
@@ -85,7 +85,7 @@ const Archives = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-border group cursor-pointer hover:bg-accent/10 transition-colors duration-300 px-4 md:px-6"
+                  className="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-border group cursor-pointer hover:bg-accent/10 transition-colors duration-300 px-4 md:px-8"
                   onMouseEnter={() => setHoveredIndex(i)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
