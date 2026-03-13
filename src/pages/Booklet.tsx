@@ -64,9 +64,9 @@ const Booklet = () => {
             </div>
             <div className="w-full h-full bg-[#f0f0f0] relative flex items-center justify-center p-12">
                <img 
-                 src="/Projects Mockups/Linear Home/Linear Home Landing Page02_opt.webp" 
-                 alt="Linear Home Landing Page"
-                 className="w-full h-full object-contain"
+                 src="/Frame 11.png" 
+                 alt="Linear Home Frame Design"
+                 className="w-full h-full object-contain shadow-xl"
                 loading="lazy" />
             </div>
           </motion.div>
