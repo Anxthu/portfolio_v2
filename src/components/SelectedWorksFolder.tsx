@@ -11,9 +11,9 @@ const FolderCard = ({ folder, folderIndex }: { folder: any, folderIndex: number 
   const [isHovered, setIsHovered] = useState(false);
   const folderRef = React.useRef(null);
   
-  // Trigger true when the folder is roughly in the middle of the viewport
-  // We remove 'once: true' so it toggles on AND off as the user scrolls
-  const isInView = useInView(folderRef, { margin: "-40% 0px -40% 0px" });
+  // Trigger true when the folder enters the middle 50% of the viewport.
+  // When it leaves this center band (scrolling up or down), it closes.
+  const isInView = useInView(folderRef, { margin: "-25% 0px -25% 0px" });
   
   // Strict check for mobile/tablet to ensure desktop never auto-triggers scroll events
   const [isMobile, setIsMobile] = useState(false);
