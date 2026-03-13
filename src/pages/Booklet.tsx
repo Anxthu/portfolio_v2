@@ -104,8 +104,8 @@ const Booklet = () => {
             className="w-full h-[60vh] md:h-[120vh] bg-[#f8f8f8] relative flex items-center justify-center p-8 md:p-16"
           >
               <img 
-                src="/Frame 11.png" 
-                alt="Frame Design"
+                src="/headphone.png" 
+                alt="Headphone Design"
                 className="w-full h-full object-contain"
               />
           </motion.div>
