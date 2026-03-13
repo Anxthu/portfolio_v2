@@ -163,6 +163,26 @@ const HeroSection = () => {
       {/* Trail container — pure DOM, no React re-renders */}
       <div ref={trailRef} className="absolute inset-0 z-20" />
 
+      {/* Top Left Text */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute top-8 left-8 z-30 text-xs uppercase tracking-[0.3em] text-muted-foreground"
+      >
+        EST. 2024
+      </motion.div>
+
+      {/* Top Right Text */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute bottom-8 right-8 z-30 text-xs uppercase tracking-[0.3em] text-muted-foreground"
+      >
+        EXPLORE BELOW
+      </motion.div>
+
       <motion.div
         style={{ opacity, scale, y }}
         className="text-center relative z-10"
@@ -171,14 +191,15 @@ const HeroSection = () => {
           {"ANANTHU".split("").map((letter, i) => (
             <motion.span
               key={i}
-              initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1.6,
-                delay: 0.2 + i * 0.1,
+                duration: 0.8,
+                delay: 0.1 + i * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="text-[clamp(3rem,10vw,8rem)] font-heading font-[800] leading-[0.95] tracking-tight text-foreground inline-block"
+              className="text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight text-foreground inline-block"
+              style={{ fontFamily: 'Boxing, sans-serif', fontWeight: 400 }}
             >
               {letter}
             </motion.span>
@@ -188,11 +209,11 @@ const HeroSection = () => {
           {"UI/UX DESIGNER FROM BANGALORE".split(" ").map((word, i) => (
             <motion.span
               key={i}
-              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1.6,
-                delay: 0.8 + i * 0.08,
+                duration: 0.8,
+                delay: 0.6 + i * 0.06,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="mt-6 text-xs uppercase tracking-[0.25em] text-muted-foreground inline-block"

@@ -1,0 +1,13 @@
+/**
+ * Custom Fonts
+ */
+
+@font-face {
+  font-family: 'Boxing';
+  src: url('/Boxing_Complete/Boxing_Complete/Fonts/WEB/fonts/Boxing-Regular.woff2') format('woff2'),
+       url('/Boxing_Complete/Boxing_Complete/Fonts/WEB/fonts/Boxing-Regular.woff') format('woff'),
+       url('/Boxing_Complete/Boxing_Complete/Fonts/WEB/fonts/Boxing-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
